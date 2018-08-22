@@ -49,7 +49,7 @@ export class Registiration extends Component {
 					<Text style={styles.label}>Enter Your Surname:</Text>
 					<View style={styles.inputWrapper}>
 						<Input
-						onChangeText={text => this.handleChange({surname, text})}
+						onChangeText={text => this.setState({surname: text})}
 						value={this.state.surname}
 						style={styles.inputStyle}
 						returnKey='next'
@@ -71,19 +71,21 @@ export class Registiration extends Component {
 					<Text style={styles.label}>Password:</Text>
 					<View style={styles.inputWrapper}>
 						<Input
-						onChangeText={text => this.handleChange({password, text})}
+						onChangeText={text => this.setState({password: text})}
 						value={this.state.password}
 						style={styles.inputStyle}
 						returnKey='next'
+						password={true}
 						/>
 					</View>
 					<Text style={styles.label}>Repeat Password:</Text>
 					<View style={styles.inputWrapper}>
 						<Input
-						onChangeText={text => this.handleChange({confirmPassword, text})}
+						onChangeText={text => this.setState({confirmPassword: text})}
 						value={this.state.confirmPassword}
 						style={styles.inputStyle}
 						returnKey='done'
+						password={true}
 						/>
 					</View>
 					<Button
