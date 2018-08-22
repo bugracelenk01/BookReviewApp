@@ -112,6 +112,7 @@ class Welcome extends Component {
 						textDecorationStyle: "solid",
 						textDecorationColor: "#fff",
 					}}
+					onPress={() => this.props.navigation.navigate('Registiration')}
 					title={`Don't Have An Account ?`}
 					/>
         </View>
