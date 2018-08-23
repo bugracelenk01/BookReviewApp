@@ -9,25 +9,28 @@
 import React, {Component} from 'react';
 import { createStackNavigator } from 'react-navigation';
 import Welcome from './src/screens/Welcome.js';
-import Registiration from './src/screens/Registiration.js'
+import Registiration from './src/screens/Registiration.js';
+import { Notifications } from './src/screens/Notifications';
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <AppNavigator />
-    );
-  }
+export default class App extends Component{
+	render() {
+		return (
+			<AppNavigator />
+		);
+	}
 }
 
 const AppNavigator = createStackNavigator({
-  Welcome:{
-    screen: Welcome,
+ 	Welcome:{
+		screen: Welcome,
 	},
 	Registiration: {
 		screen: Registiration
+	},
+	Notifications:{
+		screen: Notifications
 	}
 }, {
-  initialRouteName: 'Welcome',
-  headerMode: 'none'
-})
+	initialRouteName: 'Welcome',
+	headerMode: 'none'
+});

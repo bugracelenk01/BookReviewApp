@@ -50,6 +50,7 @@ class Welcome extends Component {
 					title='Login'
 					textStyle= {styles.buttonTextStyle}
 					style={styles.buttonStyle}
+					onPress={() => this.props.navigation.navigate('Notifications')}
 					/>
 					<View style={{ borderColor: '#353946', borderWidth: 1, marginTop: 17, width: '100%'}}/>
 					<Button
