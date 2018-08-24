@@ -1,8 +1,9 @@
 import React, { Component} from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native'
-import { Text } from 'native-base'
+import { View } from 'react-native';
+import { Text } from 'native-base';
+import { styles } from '../styles/style.js'; 
 import { Input, Button } from '../components';
-import Icon from 'react-native-vector-icons/dist/FontAwesome'
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 class Welcome extends Component {
 
@@ -50,7 +51,7 @@ class Welcome extends Component {
 					title='Login'
 					textStyle= {styles.buttonTextStyle}
 					style={styles.buttonStyle}
-					onPress={() => this.props.navigation.navigate('Notifications')}
+					onPress={() => this.props.navigation.navigate('Stream')}
 					/>
 					<View style={{ borderColor: '#353946', borderWidth: 1, marginTop: 17, width: '100%'}}/>
 					<Button
@@ -121,52 +122,5 @@ class Welcome extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-	buttonTextStyle:{
-		alignSelf: 'center',
-		fontSize: 18,
-		color:'#fff',
-		marginTop: '3%',
-	},
-  container: {
-    backgroundColor: '#23252D',
-		height: Dimensions.get('window').height,
-		alignSelf:'flex-end',
-		width: Dimensions.get('window').width
-	},
-	welcomeText:{
-		color: '#fff',
-		fontSize: 36,
-		marginBottom: 30
-	},
-  wrapper: {
-    alignSelf: 'center',
-    justifyContent:'center',
-    width: '90%',
-		alignItems: 'center',
-		height: '100%'
-  },
-  buttonStyle: {
-		backgroundColor: '#02A247',
-		width: '100%',
-		borderRadius: 5,
-		height: 44,
-		marginTop: 24,
-
-	},
-  inputStyle: {
-		height: '100%',
-		color: '#fff',
-		alignSelf: 'center'
-	},
-	inputWrapper: {
-		width: '100%',
-		backgroundColor: '#343741',
-		height: 44,
-		marginTop: 24,
-		borderRadius: 5,
-	},
-})
 
 export default Welcome;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { Header, Notif, Footer } from '../components';
+import { styles } from '../styles/style';
 
 class Notifications extends Component {
 	render() {
@@ -13,7 +14,7 @@ class Notifications extends Component {
 					onPress={() => alert('settings')}
 					goBack={() => this.props.navigation.goBack()}
 				/>
-				<ScrollView style={{ position: 'absolute', top: 85 }} contentContainerStyle={styles.wrapper}>
+				<ScrollView style={{ position: 'absolute', top: 85, width: '100%', height: '75%', left: 25 }}>
 					<Notif
 						profileImg='https://randomuser.me/api/portraits/women/48.jpg'
 						userName='Celina Turner'
@@ -60,21 +61,5 @@ class Notifications extends Component {
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		backgroundColor: '#23252D',
-		height: Dimensions.get('window').height,
-		alignSelf:'flex-end',
-		width: Dimensions.get('window').width
-	},
-	wrapper: {
-		alignSelf: 'center',
-		justifyContent:'center',
-		width: '90%',
-		alignItems: 'center',
-		height: '100%',
-	}
-});
 
 export { Notifications };

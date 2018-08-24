@@ -30,6 +30,7 @@
             "error",
             "always"
 				],
-				"no-unused-vars": [0, { "varsIgnorePattern": "^h$" }]
+				"no-unused-vars": [0, { "varsIgnorePattern": "^h$" }],
+				"no-mixed-spaces-and-tabs": [0]
     }
 }
